@@ -1,0 +1,3 @@
+
+>>> from example import factorial
+>>> factorial(6)

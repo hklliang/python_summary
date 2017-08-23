@@ -8,7 +8,7 @@ The example module supplies one function, factorial().  For example,
 """
 
 def factorial(n):
-    """Return the factorial of n, an exact integer >= 0.
+    """Return the factorial of n, an exact integer >= 0.你好
 
     >>> [factorial(n) for n in range(6)]
     [1, 1, 2, 6, 24, 120]
@@ -50,6 +50,20 @@ def factorial(n):
 
 
 if __name__ == "__main__":
+    pass
+    # import doctest
+    #
+    # #是否像是详细信息，默认为True
+    # doctest.testmod(verbose=True)
 
+    """
+    1.python example.py -v
+    it needs to import doctest
+    2.python  -m doctest-v example.py
+    3.从其他脚本调用，只能显示错误信息
     import doctest
-    doctest.testmod()
+    doctest.testfile("example.txt")
+    4.
+    python -m doctest -v example.txt
+
+    """

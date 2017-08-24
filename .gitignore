@@ -7,3 +7,5 @@
 *.xml
 .idea/workspace.xml
 .idea/workspace.xml
+.idea/misc.xml
+.idea/python_summary.iml

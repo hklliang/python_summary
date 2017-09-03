@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+/*如果头不加fixed或者加的是absolute，那么内容出现滚动条的时候，会有空白，*/
+        .pg-header {
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+
+            height: 48px;
+            background-color: #09bb28;
+            color: white;
+
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .pg-content .menu {
+            position: absolute;
+            left: 0px;
+            top: 48px;
+            bottom: 0;
+            width: 200px;
+            background-color: red;
+        }
+/*加上bottom和overflow才会出现滚动条，因为如果没有bottom，那么content的高度是里面撑大的，不会溢出*/
+        .pg-content .content {
+            position: absolute;
+            right: 0px;
+            top: 48px;
+            left: 200px;
+            bottom:0;
+            background-color: blue;
+            overflow: auto;
+            min-width: 800px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="pg-header"></div>
+<div class="pg-content">
+    <div class="menu left">a</div>
+    <div class="content left">
+        <p>hello11111111111111111111111111111111111111</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+    </div>
+    <div style='clear:both;'></div>
+</div>
+
+</body>
+</html>

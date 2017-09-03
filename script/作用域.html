@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    <!--函数的定义优先级会高于var，否则就是undefined-->
+    function t1(age) {
+        console.log(age);
+        var age=1;
+        function age() {
+            console.log(age);
+        }
+        console.log(age);
+    }
+    t1(3);
+</script>
+</body>
+</html>

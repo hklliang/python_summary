@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input id="i1" type="button" value="添加" onclick="add()"/>
+    <input id="i2" type="button" value="全选" onclick="ChooseAll()"/>
+    <input id="i3" type="button" value="取消" onclick="CancelAll()"/>
+    <input id="i4" type="button" value="反选" onclick="ReverseAll()"/>
+
+    <table>
+        <thead>
+        <td>
+            选择
+        </td>
+        <td>
+            主机
+        </td>
+        <td>
+            端口
+        </td>
+        </thead>
+        <tbody id="tb">
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>1.1.1.1</td>
+            <td>90</td>
+        </tr>
+                <tr>
+            <td><input type="checkbox"/></td>
+            <td>1.1.1.1</td>
+            <td>90</td>
+        </tr>
+                <tr>
+            <td><input type="checkbox"/></td>
+            <td>1.1.1.1</td>
+            <td>90</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    <!--key表示下标-->
+    $('#i4').click(function () {
+
+        $(':checkbox').each(function (key) {
+            console.log(key)
+            this.checked=!this.checked
+        })
+    })
+    //this Dom
+    $('#i2').click(function () {
+        $(':checkbox').each(function () {
+            this.checked=true
+        })
+    })
+    //prop设置属性，this jquery对象
+//    var a=条件?真值:假值
+    $('#i3').click(function () {
+         $(':checkbox').prop('checked',false)
+        $(':checkbox').checked=false
+
+//        $(':checkbox').each(function () {
+//            $(this).prop('checked',false)
+//        })
+    })
+ 
+</script>
+</body>
+</html>

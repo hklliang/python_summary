@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input id="i1" type="button" value="添加" onclick="add()"/>
+    <input id="i2" type="button" value="全选" onclick="ChooseAll()"/>
+    <input id="i3" type="button" value="取消" onclick="CancelAll()"/>
+    <input id="i4" type="button" value="反选" onclick="ReverseAll()"/>
+
+    <table>
+        <thead>
+        <td>
+            选择
+        </td>
+        <td>
+            主机
+        </td>
+        <td>
+            端口
+        </td>
+        </thead>
+        <tbody id="tb">
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>1.1.1.1</td>
+            <td>90</td>
+        </tr>
+                <tr>
+            <td><input type="checkbox"/></td>
+            <td>1.1.1.1</td>
+            <td>90</td>
+        </tr>
+                <tr>
+            <td><input type="checkbox"/></td>
+            <td>1.1.1.1</td>
+            <td>90</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+function ChooseAll() {
+    tb=document.getElementById('tb')
+    tr_list=tb.children
+    for(var i=0;i<tr_list.length;i++){
+        var current_tr=tr_list[i];
+        var current_td=current_tr.children[0].children[0];
+        current_td.checked=true;
+    }
+}
+function CancelAll() {
+    tb=document.getElementById('tb')
+    tr_list=tb.children
+    for(var i=0;i<tr_list.length;i++){
+        var current_tr=tr_list[i];
+        var current_td=current_tr.children[0].children[0];
+        current_td.checked=false;
+    }
+}
+function ReverseAll() {
+    tb=document.getElementById('tb')
+    tr_list=tb.children
+    for(var i=0;i<tr_list.length;i++){
+
+        var current_tr=tr_list[i];
+        var current_td=current_tr.children[0].children[0];
+        if(current_td.checked){
+            current_td.checked=false
+        }else{
+            current_td.checked=true
+        }
+    }
+}
+</script>
+</body>
+</html>

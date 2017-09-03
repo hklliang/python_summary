@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        .pg-header {
+            height: 48px;
+            background-color: #09bb28;
+            color: white;
+
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .pg-content .menu {
+            position: fixed;
+            left: 0px;
+            top: 48px;
+            bottom: 0;
+            width: 200px;
+            background-color: red;
+        }
+/*加上bottom和overflow才会出现滚动条，因为如果没有bottom，那么content的高度是里面撑大的，不会溢出*/
+        .pg-content .content {
+            position: fixed;
+            right: 0px;
+            top: 48px;
+            left: 200px;
+            bottom:0;
+            background-color: blue;
+            overflow: auto;
+
+        }
+    </style>
+</head>
+<body>
+<div class="pg-header"></div>
+<div class="pg-content">
+    <div class="menu left">a</div>
+    <div class="content left">
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -13,12 +13,13 @@ channel = connection.channel()
 channel.queue_declare(queue='hello')
 #队列，如果生产者没有队列，消费者可以生成队列
 # channel.queue_declare(queue='hello',durable=True)#队列持久化，durable=True需要在生产者和消费者都加上
+#即关闭服务就会消失消息
 
 def callback(ch, method, properties, body):
     print("--->",ch,method,properties)
     time.sleep(10)
     print(" [x] Received %r" % body)
-    ch.basic_ack(delivery_tag=method.delivery_tag)#需要确认消息已经收到，否则一起动又会自动收消息
+    ch.basic_ack(delivery_tag=method.delivery_tag)#需要确认消息已经收到，否则一启动又会自动收消息
 
 channel.basic_qos(prefetch_count=1)#只能处理一条消息，没有处理完，不会给他发消息
 channel.basic_consume(callback,
